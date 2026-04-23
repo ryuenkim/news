@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News - Your Source for Breaking News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-left">
+                    <div class="logo">
+                        <h1>Daily News</h1>
+                        <p class="tagline">Breaking News & In-Depth Analysis</p>
+                    </div>
+                </div>
+                <div class="header-center">
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search articles..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="dark-mode-toggle" title="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section / Home -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Stay Informed</h2>
+            <p>Get the latest news, in-depth features, and expert analysis</p>
+        </div>
+    </section>
+
+    <!-- Latest News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-label"><i class="fas fa-bell"></i> Breaking News</div>
+        <div class="ticker-content">
+            <span class="ticker-item"><strong>10:45 AM</strong> - International Economic Summit concludes with major trade agreement</span>
+            <span class="ticker-item"><strong>09:30 AM</strong> - Space exploration initiative launches new era of collaboration</span>
+            <span class="ticker-item"><strong>08:15 AM</strong> - Climate action gains momentum globally</span>
+        </div>
+    </div>
+
+    <!-- Main Content with Sidebar Layout -->
+    <div class="main-wrapper">
+        <main class="container main-content">
+        <!-- Content Area with Sidebar -->
+        <div class="content-with-sidebar">
+            <div class="main-articles">
+                <!-- Tab Navigation with Icons -->
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="reports"><i class="fas fa-newspaper"></i> News Reports</button>
+                    <button class="tab-btn" data-tab="features"><i class="fas fa-star"></i> Featured Articles</button>
+                    <button class="tab-btn" data-tab="editorials"><i class="fas fa-pen-fancy"></i> Editorials</button>
+                </div>
+
+                <!-- Filters and Sorting -->
+                <div class="article-controls">
+                    <div class="filter-group">
+                        <label for="categoryFilter"><i class="fas fa-filter"></i> Category:</label>
+                        <select id="categoryFilter">
+                            <option value="">All Categories</option>
+                            <option value="economy">Economy</option>
+                            <option value="technology">Technology</option>
+                            <option value="politics">Politics</option>
+                            <option value="science">Science</option>
+                            <option value="environment">Environment</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortBy"><i class="fas fa-sort"></i> Sort:</label>
+                        <select id="sortBy">
+                            <option value="latest">Latest</option>
+                            <option value="popular">Most Read</option>
+                            <option value="trending">Trending</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- News Reports Tab -->
+                <section id="reports" class="tab-content active" data-tab="reports">
+                    <div class="articles-grid hero-grid">
+                        <!-- Featured Hero Article -->
+                        <article class="article-card report featured-hero">
+                            <div class="featured-badge">Featured</div>
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=450&fit=crop" alt="Report - Economic Summit">
+                                <div class="hero-overlay">
+                                    <div class="hero-content">
+                                        <span class="category">News Report</span>
+                                        <h2>Global Economic Summit Addresses Market Volatility</h2>
+                                        <div class="hero-meta">
+                                            <span class="author-info">
+                                                <img src="https://i.pravatar.cc/40?img=1" alt="Thomas Reuters" class="author-avatar">
+                                                <span>
+                                                    <strong>Thomas Reuters</strong>
+                                                    <small>Senior Reporter</small>
+                                                </span>
+                                            </span>
+                                            <span class="read-time">4 min read</span>
+                                        </div>
+                                        <p class="excerpt">World leaders gathered today at the International Economic Forum to discuss strategies for stabilizing global markets. The summit focused on trade agreements and economic recovery plans.</p>
+                                        <a href="#" class="read-more">Read Full Report →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <h3 class="subsection-title">More News</h3>
+                    <div class="articles-grid regular-grid">
+                        <!-- Report 1 -->
+                        <article class="article-card report featured-article">
+                            <div class="featured-badge">Featured</div>
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop" alt="Report - Economic Summit">
+                                <p class="image-caption">World leaders at International Economic Forum | Photo by Reuters</p>
+                            </div>
+                            <div class="article-content">
+                                <span class="category">News Report</span>
+                                <h3>Global Economic Summit Addresses Market Volatility</h3>
+                                <div class="article-meta">
+                                    <span class="author">
+                                        <img src="https://i.pravatar.cc/40?img=1" alt="Thomas Reuters" class="author-avatar">
+                                        <span>
+                                            <strong>Thomas Reuters</strong>
+                                            <small>Senior Reporter</small>
+                                        </span>
+                                    </span>
+                                    <span class="date" data-time="30 minutes ago">April 23, 2026</span>
+                                    <span class="read-time">4 min read</span>
+                                </div>
+                                <div class="article-tags">
+                                    <span class="tag">Economy</span>
+                                    <span class="tag">Markets</span>
+                                    <span class="tag">Business</span>
+                                </div>
+                                <p class="excerpt">World leaders gathered today at the International Economic Forum to discuss strategies for stabilizing global markets. The summit focused on trade agreements and economic recovery plans.</p>
+                                <div class="article-actions">
+                                    <a href="#" class="read-more">Read Report →</a>
+                                    <div class="article-tools">
+                                        <button class="bookmark-btn" title="Bookmark this article">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share this article">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Report 2 -->
+                        <article class="article-card report">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop" alt="Report - Space Exploration">
+                                <p class="image-caption">New space exploration initiative unveiled | Photo by NASA/ESA</p>
+                            </div>
+                            <div class="article-content">
+                                <span class="category">News Report</span>
+                                <h3>New Space Exploration Initiative Launched</h3>
+                                <div class="article-meta">
+                                    <span class="author">
+                                        <img src="https://i.pravatar.cc/40?img=2" alt="Dr. Robert Space" class="author-avatar">
+                                        <span>
+                                            <strong>Dr. Robert Space</strong>
+                                            <small>Science Editor</small>
+                                        </span>
+                                    </span>
+                                    <span class="date" data-time="2 hours ago">April 22, 2026</span>
+                                    <span class="read-time">6 min read</span>
+                                </div>
+                                <div class="article-tags">
+                                    <span class="tag">Space</span>
+                                    <span class="tag">Science</span>
+                                    <span class="tag">Innovation</span>
+                                </div>
+                                <p class="excerpt">An ambitious new space program was unveiled today, aiming to establish sustainable human presence on the Moon by 2030. The initiative marks a significant milestone in international space cooperation.</p>
+                                <div class="article-actions">
+                                    <a href="#" class="read-more">Read Report →</a>
+                                    <div class="article-tools">
+                                        <button class="bookmark-btn" title="Bookmark this article">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share this article">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Featured Articles Tab -->
+                <section id="features" class="tab-content" data-tab="features">
+                    <div class="articles-grid three-columns">
+                        <!-- Feature 1 -->
+                        <article class="article-card feature">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop" alt="Feature - Climate Change">
+                                <p class="image-caption">Climate action in progress | Photo by Climate News</p>
+                            </div>
+                            <div class="article-content">
+                                <span class="category">Feature</span>
+                                <h3>Climate Action: Cities Leading the Change</h3>
+                                <div class="article-meta">
+                                    <span class="author">
+                                        <img src="https://i.pravatar.cc/40?img=3" alt="Emma Wilson" class="author-avatar">
+                                        <span>
+                                            <strong>Emma Wilson</strong>
+                                            <small>Environment Correspondent</small>
+                                        </span>
+                                    </span>
+                                    <span class="date" data-time="3 days ago">April 21, 2026</span>
+                                    <span class="read-time">6 min read</span>
+                                </div>
+                                <div class="article-tags">
+                                    <span class="tag">Environment</span>
+                                    <span class="tag">Sustainability</span>
+                                </div>
+                                <p class="excerpt">Around the world, cities are taking bold steps to combat climate change. From renewable energy initiatives to sustainable transportation, we showcase inspiring stories.</p>
+                                <div class="article-actions">
+                                    <a href="#" class="read-more">Read More →</a>
+                                    <div class="article-tools">
+                                        <button class="bookmark-btn" title="Bookmark this article">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share this article">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Feature 2 -->
+                        <article class="article-card feature">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Feature - Education">
+                                <p class="image-caption">Digital learning transforms education | Photo by Education Today</p>
+                            </div>
+                            <div class="article-content">
+                                <span class="category">Feature</span>
+                                <h3>The Evolution of Digital Learning</h3>
+                                <div class="article-meta">
+                                    <span class="author">
+                                        <img src="https://i.pravatar.cc/40?img=4" alt="David Park" class="author-avatar">
+                                        <span>
+                                            <strong>David Park</strong>
+                                            <small>Tech Analyst</small>
+                                        </span>
+                                    </span>
+                                    <span class="date" data-time="5 days ago">April 20, 2026</span>
+                                    <span class="read-time">5 min read</span>
+                                </div>
+                                <div class="article-tags">
+                                    <span class="tag">Education</span>
+                                    <span class="tag">Tech</span>
+                                </div>
+                                <p class="excerpt">As education transforms in the digital age, institutions worldwide are adapting to meet students' needs. Explore how innovative learning platforms are shaping the future.</p>
+                                <div class="article-actions">
+                                    <a href="#" class="read-more">Read More →</a>
+                                    <div class="article-tools">
+                                        <button class="bookmark-btn" title="Bookmark this article">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share this article">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Feature 3 -->
+                        <article class="article-card feature">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop" alt="Feature - Health">
+                                <p class="image-caption">Medical breakthroughs offer new hope | Photo by Health Weekly</p>
+                            </div>
+                            <div class="article-content">
+                                <span class="category">Feature</span>
+                                <h3>Breakthrough in Medical Research</h3>
+                                <div class="article-meta">
+                                    <span class="author">
+                                        <img src="https://i.pravatar.cc/40?img=5" alt="Dr. Lisa Zhang" class="author-avatar">
+                                        <span>
+                                            <strong>Dr. Lisa Zhang</strong>
+                                            <small>Medical Correspondent</small>
+                                        </span>
+                                    </span>
+                                    <span class="date" data-time="1 week ago">April 19, 2026</span>
+                                    <span class="read-time">8 min read</span>
+                                </div>
+                                <div class="article-tags">
+                                    <span class="tag">Health</span>
+                                    <span class="tag">Science</span>
+                                </div>
+                                <p class="excerpt">Scientists announce major breakthroughs in disease treatment and prevention. Discover how cutting-edge research is improving healthcare outcomes and offering hope to millions.</p>
+                                <div class="article-actions">
+                                    <a href="#" class="read-more">Read More →</a>
+                                    <div class="article-tools">
+                                        <button class="bookmark-btn" title="Bookmark this article">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share this article">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Editorials Tab -->
+                <section id="editorials" class="tab-content" data-tab="editorials">
+                    <div class="articles-grid">
+                        <!-- Featured Editorial -->
+                        <article class="article-card editorial featured-article">
+                            <div class="featured-badge">Featured</div>
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop" alt="Editorial - Global Politics">
+                                <p class="image-caption">Image courtesy of Unsplash</p>
+                            </div>
+                            <div class="article-content">
+                                <span class="category">Editorial</span>
+                                <h3>The Future of Global Diplomacy</h3>
+                                <div class="article-meta">
+                                    <span class="author">
+                                        <img src="https://i.pravatar.cc/40?img=6" alt="Sarah Johnson" class="author-avatar">
+                                        <span>
+                                            <strong>Sarah Johnson</strong>
+                                            <small>Political Correspondent</small>
+                                        </span>
+                                    </span>
+                                    <span class="date" data-time="2 hours ago">April 23, 2026</span>
+                                    <span class="read-time">5 min read</span>
+                                </div>
+                                <div class="article-tags">
+                                    <span class="tag">Politics</span>
+                                    <span class="tag">Global Affairs</span>
+                                    <span class="tag">Diplomacy</span>
+                                </div>
+                                <p class="excerpt">As nations face unprecedented challenges, the role of diplomatic relations becomes increasingly vital. This editorial explores the need for renewed commitment to international cooperation and understanding in today's complex geopolitical landscape.</p>
+                                <div class="article-actions">
+                                    <a href="#" class="read-more">Read Full Editorial →</a>
+                                    <div class="article-tools">
+                                        <button class="bookmark-btn" title="Bookmark this article">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share this article">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Editorial 2 -->
+                        <article class="article-card editorial">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Editorial - Technology Impact">
+                                <p class="image-caption">Tech innovation reshaping society | Photo by Tech Daily</p>
+                            </div>
+                            <div class="article-content">
+                                <span class="category">Editorial</span>
+                                <h3>Technology's Impact on Society</h3>
+                                <div class="article-meta">
+                                    <span class="author">
+                                        <img src="https://i.pravatar.cc/40?img=7" alt="Michael Chen" class="author-avatar">
+                                        <span>
+                                            <strong>Michael Chen</strong>
+                                            <small>Tech Editor</small>
+                                        </span>
+                                    </span>
+                                    <span class="date" data-time="1 day ago">April 22, 2026</span>
+                                    <span class="read-time">7 min read</span>
+                                </div>
+                                <div class="article-tags">
+                                    <span class="tag">Technology</span>
+                                    <span class="tag">AI</span>
+                                </div>
+                                <p class="excerpt">The rapid advancement of artificial intelligence and automation is reshaping our society. We examine the opportunities and challenges this technological revolution presents.</p>
+                                <div class="article-actions">
+                                    <a href="#" class="read-more">Read Full Editorial →</a>
+                                    <div class="article-tools">
+                                        <button class="bookmark-btn" title="Bookmark this article">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share this article">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Editorial 3 -->
+                        <article class="article-card editorial">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1554224311-beee415c201?w=400&h=300&fit=crop" alt="Editorial - Economic Policy">
+                                <p class="image-caption">Economic policy shapes future | Photo by Economics Today</p>
+                            </div>
+                            <div class="article-content">
+                                <span class="category">Editorial</span>
+                                <h3>Rethinking Economic Policy in 2026</h3>
+                                <div class="article-meta">
+                                    <span class="author">
+                                        <img src="https://i.pravatar.cc/40?img=8" alt="Dr. Patricia Williams" class="author-avatar">
+                                        <span>
+                                            <strong>Dr. Patricia Williams</strong>
+                                            <small>Economics Editor</small>
+                                        </span>
+                                    </span>
+                                    <span class="date" data-time="3 hours ago">April 23, 2026</span>
+                                    <span class="read-time">6 min read</span>
+                                </div>
+                                <div class="article-tags">
+                                    <span class="tag">Economy</span>
+                                    <span class="tag">Policy</span>
+                                </div>
+                                <p class="excerpt">As global markets face unprecedented challenges, governments must reconsider traditional economic policies. Our analysis explores innovative approaches to sustainable growth and fiscal responsibility.</p>
+                                <div class="article-actions">
+                                    <a href="#" class="read-more">Read Full Editorial →</a>
+                                    <div class="article-tools">
+                                        <button class="bookmark-btn" title="Bookmark this article">
+                                            <i class="far fa-bookmark"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share this article">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Breaking News Section -->
+                <div class="sidebar-widget breaking-widget">
+                    <h3><i class="fas fa-exclamation-circle"></i> Breaking News</h3>
+                    <ul>
+                        <li><a href="#">Economic Summit reaches historic agreement</a></li>
+                        <li><a href="#">New space initiative launches today</a></li>
+                        <li><a href="#">Climate accord gains momentum</a></li>
+                    </ul>
+                </div>
+
+                <!-- Trending Section -->
+                <div class="sidebar-widget trending-widget">
+                    <h3><i class="fas fa-fire"></i> Trending Now</h3>
+                    <ol>
+                        <li>
+                            <a href="#">Global Economic Summit...</a>
+                            <span class="trending-meta">2.5K reads</span>
+                        </li>
+                        <li>
+                            <a href="#">Space Exploration Initiative...</a>
+                            <span class="trending-meta">1.8K reads</span>
+                        </li>
+                        <li>
+                            <a href="#">Climate Action Cities...</a>
+                            <span class="trending-meta">1.4K reads</span>
+                        </li>
+                        <li>
+                            <a href="#">Digital Learning Evolution...</a>
+                            <span class="trending-meta">980 reads</span>
+                        </li>
+                        <li>
+                            <a href="#">Medical Research Breakthrough...</a>
+                            <span class="trending-meta">756 reads</span>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Advertisement Space in Sidebar -->
+                <div class="sidebar-widget sidebar-ad">
+                    <p>Advertisement</p>
+                </div>
+
+                <!-- Newsletter Variation -->
+                <div class="sidebar-widget newsletter-widget">
+                    <h3>Get Daily Updates</h3>
+                    <p>Subscribe to our daily newsletter for exclusive news and analysis.</p>
+                    <form class="sidebar-newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <select required>
+                            <option value="">Select category</option>
+                            <option value="all">All News</option>
+                            <option value="editorials">Editorials</option>
+                            <option value="features">Features</option>
+                            <option value="reports">Reports</option>
+                        </select>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Social Media Widget -->
+                <div class="sidebar-widget social-widget">
+                    <h3>Follow Us</h3>
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Bookmarks Widget -->
+                <div class="sidebar-widget bookmarks-widget">
+                    <h3><i class="fas fa-bookmarks"></i> My Bookmarks</h3>
+                    <ul id="bookmarksList">
+                        <li class="empty-bookmarks">No bookmarked articles yet</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        </main>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest news delivered straight to your inbox</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Daily News</h4>
+                    <p>Your trusted source for breaking news, in-depth analysis, and comprehensive coverage of global events.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#editorials">Editorials</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#reports">News Reports</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@dailynews.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Address: 123 News Street, Media City, MC 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul class="social-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Daily News. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const bookmarksList = document.getElementById('bookmarksList');
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        const body = document.body;
+
+        // Dark Mode Toggle
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+            darkModeToggle.querySelector('i').classList.toggle('fa-moon');
+            darkModeToggle.querySelector('i').classList.toggle('fa-sun');
+        });
+
+        // Load dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.querySelector('i').classList.remove('fa-moon');
+            darkModeToggle.querySelector('i').classList.add('fa-sun');
+        }
+
+        // Tab Navigation
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabName = btn.getAttribute('data-tab');
+                
+                // Hide all tabs
+                tabContents.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                
+                // Remove active class from all buttons
+                tabBtns.forEach(b => {
+                    b.classList.remove('active');
+                });
+                
+                // Show selected tab and mark button as active
+                document.getElementById(tabName).classList.add('active');
+                btn.classList.add('active');
+            });
+        });
+
+        // Bookmark functionality
+        const bookmarkBtns = document.querySelectorAll('.bookmark-btn');
+        
+        bookmarkBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                btn.classList.toggle('bookmarked');
+                btn.querySelector('i').classList.toggle('far');
+                btn.querySelector('i').classList.toggle('fas');
+                
+                // Update bookmarks list
+                updateBookmarksDisplay();
+            });
+        });
+
+        function updateBookmarksDisplay() {
+            const bookmarked = document.querySelectorAll('.bookmark-btn.bookmarked');
+            const bookmarksList = document.getElementById('bookmarksList');
+            
+            bookmarksList.innerHTML = '';
+            
+            if (bookmarked.length === 0) {
+                bookmarksList.innerHTML = '<li class="empty-bookmarks">No bookmarked articles yet</li>';
+            } else {
+                bookmarked.forEach(btn => {
+                    const title = btn.closest('.article-card').querySelector('h3').textContent;
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="#">${title}</a>`;
+                    bookmarksList.appendChild(li);
+                });
+            }
+        }
+
+        // Share functionality
+        const shareBtns = document.querySelectorAll('.share-btn');
+        
+        shareBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const title = btn.closest('.article-card').querySelector('h3').textContent;
+                const text = `Check out this article: ${title}`;
+                
+                if (navigator.share) {
+                    navigator.share({
+                        title: title,
+                        text: text,
+                        url: window.location.href
+                    });
+                } else {
+                    alert('Share functionality not available. Article: ' + title);
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.querySelector('.search-btn');
+        
+        searchBtn.addEventListener('click', () => {
+            performSearch();
+        });
+        
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        function performSearch() {
+            const query = searchInput.value.toLowerCase();
+            const articles = document.querySelectorAll('.article-card');
+            
+            articles.forEach(article => {
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const excerpt = article.querySelector('.excerpt').textContent.toLowerCase();
+                const tags = Array.from(article.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+                
+                if (title.includes(query) || excerpt.includes(query) || tags.some(tag => tag.includes(query))) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+
+        // Newsletter form
+        const newsletterForms = document.querySelectorAll('.newsletter-form, .sidebar-newsletter-form');
+        
+        newsletterForms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = form.querySelector('input[type="email"]').value;
+                alert(`Thank you for subscribing with ${email}!`);
+                form.reset();
+            });
+        });
+
+        // Comments - View all
+        const viewAllBtn = document.querySelector('.view-all-comments');
+        if (viewAllBtn) {
+            viewAllBtn.addEventListener('click', () => {
+                alert('Loading all comments...');
+            });
+        }
+
+        // Filter and Sort Functionality
+        const categoryFilter = document.getElementById('categoryFilter');
+        const sortBy = document.getElementById('sortBy');
+        const allArticles = document.querySelectorAll('.article-card');
+        
+        function filterAndSort() {
+            const selectedCategory = categoryFilter.value.toLowerCase();
+            const sortOption = sortBy.value;
+            
+            // Get visible articles for the active tab
+            const currentTab = document.querySelector('.tab-content.active');
+            const articlesToSort = Array.from(currentTab.querySelectorAll('.article-card'));
+            
+            // Filter articles
+            articlesToSort.forEach(article => {
+                if (selectedCategory === '') {
+                    article.style.display = 'block';
+                } else {
+                    const tags = Array.from(article.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+                    const categoryText = article.querySelector('.category')?.textContent.toLowerCase() || '';
+                    
+                    if (tags.some(tag => tag.includes(selectedCategory)) || categoryText.includes(selectedCategory)) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                }
+            });
+            
+            // Sort articles
+            const visibleArticles = articlesToSort.filter(article => article.style.display !== 'none');
+            
+            if (sortOption === 'trending') {
+                visibleArticles.sort((a, b) => {
+                    const aReads = parseInt(a.querySelector('.trending-meta')?.textContent) || 0;
+                    const bReads = parseInt(b.querySelector('.trending-meta')?.textContent) || 0;
+                    return bReads - aReads;
+                });
+            } else if (sortOption === 'popular') {
+                visibleArticles.sort((a, b) => {
+                    const aTime = a.querySelector('.read-time')?.textContent || '0';
+                    const bTime = b.querySelector('.read-time')?.textContent || '0';
+                    return parseInt(bTime) - parseInt(aTime);
+                });
+            }
+            // 'latest' is default (no sorting needed)
+        }
+        
+        categoryFilter?.addEventListener('change', filterAndSort);
+        sortBy?.addEventListener('change', filterAndSort);
+    </script>
+</body>
+</html>
